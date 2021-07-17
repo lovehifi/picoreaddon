@@ -8,9 +8,7 @@
 **APmenu** (control stop/start for Aplayer, Aprenderer, Roonbridge), port: 7780
 
 ###### Install
-> wget -O- https://raw.githubusercontent.com/quatmo/piCoreAddon/main/ap-install.sh | sudo sh
+> wget -O- https://raw.githubusercontent.com/lovehifi/picoreaddon/main/ap-install.sh | sudo sh
 > 
 
 ####
-
-
