@@ -7,7 +7,8 @@ useBusybox
 cd /tmp/
 wget https://raw.githubusercontent.com/lovehifi/picoreaddon/main/APMenu.tgz
 tar -zxf /tmp/APMenu.tgz --overwrite -C /home/tc/
-pcp_write_var_to_config USER_COMMAND_2 "sleep 10;/home/tc/aplayer/aplayer.sh;/home/tc/apmenu/apmenu.sh;/home/tc/aprenderer/aprenderer.sh"
+
+pcp_write_var_to_config USER_COMMAND_2 "%2fbin/sleep%2010;%2fhome%2ftc%2faplayer%2faplayer.sh;%2fhome%2ftc%2faprenderer%2faprenderer.sh;%2fhome%2ftc%2fapmenu%2fapmenu.sh"
 
 echo "Rebooting..."
 sleep 3
