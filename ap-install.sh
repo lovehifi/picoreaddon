@@ -3,6 +3,10 @@
 . /etc/init.d/tc-functions
 . /var/www/cgi-bin/pcp-functions
 useBusybox
+sudo rm /home/tc/upnp/squeeze2upnp
+sudo rm /home/tc/aplayer/aplayer
+sudo rm /home/tc/aprenderer/ap2renderer
+sudo rm /home/tc/apmenu/apmenu
 cd /tmp/
 wget https://raw.githubusercontent.com/lovehifi/picoreaddon/main/picoreaddon.tgz
 tar -zxf /tmp/picoreaddon.tgz --overwrite -C /home/tc/
