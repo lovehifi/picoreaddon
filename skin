@@ -1,1 +1,42 @@
+#! /bin/bash
+cd /tmp
+# Check if any .tgz files exist in /root/
+if ls /tmp/*tar.gz 1> /dev/null 2>&1; then
+  # Remove each .tgz file
+  for file in /tmp/*tar.gz; do
+    rm -f "$file"
+  done
+fi
+
+if ls /tmp/*tgz 1> /dev/null 2>&1; then
+  # Remove each .tgz file
+  for file in /tmp/*tgz; do
+    rm -f "$file"
+  done
+fi
+wget https://raw.githubusercontent.com/lovehifi/pico/main/index.tar.gz
+wget https://raw.githubusercontent.com/lovehifi/pico/main/js1.tar.gz
+wget https://raw.githubusercontent.com/lovehifi/pico/main/js2.tar.gz
+wget https://raw.githubusercontent.com/lovehifi/pico/main/lib-min.tar.gz
+wget https://raw.githubusercontent.com/lovehifi/pico/main/mobile.tar.gz
+wget https://raw.githubusercontent.com/lovehifi/pico/main/mo.tar.gz
+wget https://raw.githubusercontent.com/lovehifi/pico/main/style.tar.gz
+wget https://raw.githubusercontent.com/lovehifi/pico/main/Windows-10-Dark.tar.gz
+wget https://raw.githubusercontent.com/lovehifi/pico/main/background.tar.gz
+wget https://raw.githubusercontent.com/lovehifi/pico/main/darker.tar.gz
+AFOL="/tmp/var/lib/squeezeboxserver/cache/InstalledPlugins/Plugins/MaterialSkin/HTML/material"
+BFOL="/opt/logitechmediaserver-git/cache/InstalledPlugins/Plugins/MaterialSkin/HTML/material"
+mkdir -p $BFOL
+tar -xzvf /tmp/index.tar.gz --overwrite -C /tmp/
+tar -xzvf /tmp/js1.tar.gz --overwrite -C /tmp/
+tar -xzvf /tmp/js2.tar.gz --overwrite -C /tmp/
+tar -xzvf /tmp/lib-min.tar.gz --overwrite -C /tmp/
+tar -xzvf /tmp/mobile.tar.gz --overwrite -C /tmp/
+tar -xzvf /tmp/Windows-10-Dark.tar.gz --overwrite -C /tmp/
+tar -xzvf /tmp/mo.tar.gz --overwrite -C /tmp/
+tar -xzvf /tmp/style.tar.gz --overwrite -C /tmp/
+tar -xzvf /tmp/background.tar.gz --overwrite -C /tmp/
+tar -xzvf /tmp/darker.tar.gz --overwrite -C /tmp/
+cp -rf $AFOL $BFOL
+
 
