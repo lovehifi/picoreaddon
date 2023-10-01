@@ -25,7 +25,7 @@ wget https://raw.githubusercontent.com/lovehifi/pico/main/Windows-10-Dark.tar.gz
 wget https://raw.githubusercontent.com/lovehifi/pico/main/background.tar.gz
 wget https://raw.githubusercontent.com/lovehifi/pico/main/darker.tar.gz
 AFOL="/tmp/var/lib/squeezeboxserver/cache/InstalledPlugins/Plugins/MaterialSkin/HTML/material"
-BFOL="/opt/logitechmediaserver-git/cache/InstalledPlugins/Plugins/MaterialSkin/HTML/material"
+BFOL="/opt/logitechmediaserver-git/cache/InstalledPlugins/Plugins/MaterialSkin/HTML/"
 mkdir -p $BFOL
 tar -xzvf /tmp/index.tar.gz --overwrite -C /tmp/
 tar -xzvf /tmp/js1.tar.gz --overwrite -C /tmp/
