@@ -14,6 +14,7 @@ if ls /tmp/*tgz 1> /dev/null 2>&1; then
     rm -f "$file"
   done
 fi
+
 if [ -d "/opt/logitechmediaserver-git" ]; then
 wget https://raw.githubusercontent.com/lovehifi/pico/main/index.tar.gz
 wget https://raw.githubusercontent.com/lovehifi/pico/main/js1.tar.gz
