@@ -40,7 +40,6 @@ tar -xzvf /tmp/background.tar.gz --overwrite -C /tmp/
 tar -xzvf /tmp/desktop.tar.gz --overwrite -C /
 tar -xzvf /tmp/darker.tar.gz --overwrite -C /tmp/
 cp -rf $AFOL $BFOL
-
-    systemctl restart logitechmediaserver-git.service
 fi
 
+systemctl restart logitechmediaserver-git.service
