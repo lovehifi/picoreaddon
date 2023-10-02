@@ -14,6 +14,7 @@ if ls /tmp/*tgz 1> /dev/null 2>&1; then
     rm -f "$file"
   done
 fi
+if [ -d "/opt/logitechmediaserver-git" ]; then
 wget https://raw.githubusercontent.com/lovehifi/pico/main/index.tar.gz
 wget https://raw.githubusercontent.com/lovehifi/pico/main/js1.tar.gz
 wget https://raw.githubusercontent.com/lovehifi/pico/main/js2.tar.gz
@@ -27,7 +28,6 @@ wget https://raw.githubusercontent.com/lovehifi/pico/main/darker.tar.gz
 wget https://raw.githubusercontent.com/lovehifi/pico/main/desktop.tar.gz
 AFOL="/tmp/var/lib/squeezeboxserver/cache/InstalledPlugins/Plugins/MaterialSkin/HTML/material"
 BFOL="/opt/logitechmediaserver-git/cache/InstalledPlugins/Plugins/MaterialSkin/HTML/"
-
 tar -xzvf /tmp/index.tar.gz --overwrite -C /tmp/
 tar -xzvf /tmp/js1.tar.gz --overwrite -C /tmp/
 tar -xzvf /tmp/js2.tar.gz --overwrite -C /tmp/
@@ -38,9 +38,9 @@ tar -xzvf /tmp/mo.tar.gz --overwrite -C /tmp/
 tar -xzvf /tmp/style.tar.gz --overwrite -C /tmp/
 tar -xzvf /tmp/background.tar.gz --overwrite -C /tmp/
 tar -xzvf /tmp/desktop.tar.gz --overwrite -C /
-
-
 tar -xzvf /tmp/darker.tar.gz --overwrite -C /tmp/
 cp -rf $AFOL $BFOL
 
+    systemctl restart logitechmediaserver-git.service
+fi
 
