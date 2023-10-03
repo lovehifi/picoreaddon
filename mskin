@@ -45,4 +45,11 @@ else
     echo "Please install Material Skin before installing this CSS Mod"
 fi
 
+if [ -f "/opt/sq/squeezelite64" ]; then
+sed -i "s|SQ32-rAudio|SQ64-rAudio|g" /opt/logitechmediaserver-git/cache/InstalledPlugins/Plugins/MaterialSkin/HTML/material/html/js/material.min.js
+echo "Completed."
+else
+echo "File not found. Skipping..."
+fi
+
 systemctl restart logitechmediaserver-git.service
