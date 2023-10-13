@@ -17,8 +17,8 @@ fi
 
 if [ -d "/opt/logitechmediaserver-git/cache/InstalledPlugins/Plugins/MaterialSkin" ]; then
 wget https://raw.githubusercontent.com/lovehifi/pico/main/index.tar.gz
-wget https://raw.githubusercontent.com/lovehifi/pico/main/js1.tar.gz
-wget https://raw.githubusercontent.com/lovehifi/pico/main/js2.tar.gz
+#wget https://raw.githubusercontent.com/lovehifi/pico/main/js1.tar.gz
+#wget https://raw.githubusercontent.com/lovehifi/pico/main/js2.tar.gz
 wget https://raw.githubusercontent.com/lovehifi/pico/main/lib-min.tar.gz
 wget https://raw.githubusercontent.com/lovehifi/pico/main/mobile.tar.gz
 wget https://raw.githubusercontent.com/lovehifi/pico/main/mo.tar.gz
@@ -30,8 +30,8 @@ wget https://raw.githubusercontent.com/lovehifi/pico/main/desktop.tar.gz
 AFOL="/tmp/var/lib/squeezeboxserver/cache/InstalledPlugins/Plugins/MaterialSkin/HTML/material"
 BFOL="/opt/logitechmediaserver-git/cache/InstalledPlugins/Plugins/MaterialSkin/HTML/"
 tar -xzvf /tmp/index.tar.gz --overwrite -C /tmp/
-tar -xzvf /tmp/js1.tar.gz --overwrite -C /tmp/
-tar -xzvf /tmp/js2.tar.gz --overwrite -C /tmp/
+#tar -xzvf /tmp/js1.tar.gz --overwrite -C /tmp/
+#tar -xzvf /tmp/js2.tar.gz --overwrite -C /tmp/
 tar -xzvf /tmp/lib-min.tar.gz --overwrite -C /tmp/
 tar -xzvf /tmp/mobile.tar.gz --overwrite -C /tmp/
 tar -xzvf /tmp/Windows-10-Dark.tar.gz --overwrite -C /tmp/
@@ -46,7 +46,7 @@ else
 fi
 
 if [ -f "/opt/sq/squeezelite64" ]; then
-sed -i "s|SQ32-rAudio|SQ64-rAudio|g" /opt/logitechmediaserver-git/cache/InstalledPlugins/Plugins/MaterialSkin/HTML/material/html/js/material.min.js
+#sed -i "s|SQ32-rAudio|SQ64-rAudio|g" /opt/logitechmediaserver-git/cache/InstalledPlugins/Plugins/MaterialSkin/HTML/material/html/js/material.min.js
 echo "Completed."
 else
 echo "File not found. Skipping..."
