@@ -46,10 +46,13 @@ else
 fi
 
 if [ -f "/opt/sq/squeezelite64" ]; then
-#sed -i "s|SQ32-rAudio|SQ64-rAudio|g" /opt/logitechmediaserver-git/cache/InstalledPlugins/Plugins/MaterialSkin/HTML/material/html/js/material.min.js
+#sed -i "s|SQ32|SQ64|g" /opt/logitechmediaserver-git/cache/InstalledPlugins/Plugins/MaterialSkin/HTML/material/html/js/material.min.js
 echo "Completed."
 else
-echo "File not found. Skipping..."
+echo "Skipping..."
 fi
 
+
 systemctl restart logitechmediaserver-git.service
+
+echo "Installation completed, please clear your browser cache and refresh."
