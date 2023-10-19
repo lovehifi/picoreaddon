@@ -43,9 +43,20 @@ tar -xzvf /tmp/darker.tar.gz --overwrite -C /tmp/
 tar -xzvf /tmp/addtohomescreen.tar.gz --overwrite -C /tmp/
 tar -xzvf /tmp/addtohomescreencss.tar.gz --overwrite -C /tmp/
 cp -rf $AFOL $BFOL
+
+hostname=$(hostname)
+replacement="http://${hostname}"
+if [ -f "/srv/http/assets/js/main.js" ]; then
+sed -i "s|https://github.com/rern/rAudio/discussions|${replacement}:9000|g" /srv/http/assets/js/main.js
+echo "Completed."
+else
+echo "File not found. Skipping..."
+fi
+
 else
     echo "Please install Material Skin before installing this CSS Mod"
 fi
+
 
 if [ -f "/opt/sq/squeezelite64" ]; then
 #sed -i "s|SQ32|SQ64|g" /opt/logitechmediaserver-git/cache/InstalledPlugins/Plugins/MaterialSkin/HTML/material/html/js/material.min.js
@@ -53,7 +64,6 @@ echo "Completed."
 else
 echo "Skipping..."
 fi
-
 
 systemctl restart logitechmediaserver-git.service
 
