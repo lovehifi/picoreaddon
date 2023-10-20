@@ -47,6 +47,8 @@ tar -xzvf /tmp/js3.tar.gz --overwrite -C /
 tar -xzvf /tmp/js4.tar.gz --overwrite -C /
 cp -rf $AFOL $BFOL
 
+# 15565 this.setLayout(false); to this.setLayout();
+
 hostname=$(hostname)
 replacement="http://${hostname}"
 if [ -f "/srv/http/assets/js/main.js" ]; then
