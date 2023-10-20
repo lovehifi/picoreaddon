@@ -52,7 +52,7 @@ cp -rf $AFOL $BFOL
 hostname=$(hostname)
 replacement="http://${hostname}"
 if [ -f "/srv/http/assets/js/main.js" ]; then
-sed -i "s|https://github.com/rern/rAudio/discussions|${replacement}:9000|g" /srv/http/assets/js/main.js
+sed -i "s|https://github.com/rern/rAudio/discussions|http://raudio:9000/|g" /srv/http/assets/js/main.js
 echo "Completed."
 else
 echo "File not found. Skipping..."
