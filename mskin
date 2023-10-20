@@ -62,7 +62,6 @@ else
     echo "Please install Material Skin before installing this CSS Mod"
 fi
 
-
 if [ -f "/opt/sq/squeezelite64" ]; then
 #sed -i "s|SQ32|SQ64|g" /opt/logitechmediaserver-git/cache/InstalledPlugins/Plugins/MaterialSkin/HTML/material/html/js/material.min.js
 echo "Completed."
@@ -71,5 +70,8 @@ echo "Skipping..."
 fi
 chown -Rv logitechms:logitechms /opt/logitechmediaserver-git/cache/InstalledPlugins/Plugins/MaterialSkin/HTML/material
 systemctl restart logitechmediaserver-git.service
+
+#chown http:http -Rv /opt/logitechmediaserver-git/prefs/material-skin
+chown http:http /etc/asound.conf
 
 echo "Installation completed, please clear your browser cache and refresh."
