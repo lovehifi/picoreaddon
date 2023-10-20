@@ -64,7 +64,7 @@ echo "Completed."
 else
 echo "Skipping..."
 fi
-
+chown -Rv logitechms:logitechms /opt/logitechmediaserver-git/cache/InstalledPlugins/Plugins/MaterialSkin/HTML/material
 systemctl restart logitechmediaserver-git.service
 
 echo "Installation completed, please clear your browser cache and refresh."
