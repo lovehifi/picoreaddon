@@ -33,7 +33,7 @@ if [ -f "/srv/http/assets/js/main.js" ]; then
 sed -i "s|https://github.com/rern/rAudio/discussions|http://raudio:9000/|g" /srv/http/assets/js/main.js
 echo "Completed."
 else
-echo "File not found. Skipping..."
+echo "Skipping..."
 fi
 
 else
