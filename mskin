@@ -32,7 +32,7 @@ wget https://raw.githubusercontent.com/lovehifi/pico/main/addtohomescreencss.tar
 
 AFOL="/tmp/var/lib/squeezeboxserver/cache/InstalledPlugins/Plugins/MaterialSkin/HTML/material"
 BFOL="/opt/logitechmediaserver-git/cache/InstalledPlugins/Plugins/MaterialSkin/HTML/"
-tar -xzvf /tmp/index.tar.gz --overwrite -C /tmp/
+#tar -xzvf /tmp/index.tar.gz --overwrite -C /tmp/
 tar -xzvf /tmp/lib-min.tar.gz --overwrite -C /tmp/
 tar -xzvf /tmp/mobile.tar.gz --overwrite -C /tmp/
 tar -xzvf /tmp/Windows-10-Dark.tar.gz --overwrite -C /tmp/
