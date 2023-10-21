@@ -27,8 +27,8 @@ wget https://raw.githubusercontent.com/lovehifi/pico/main/darker.tar.gz
 wget https://raw.githubusercontent.com/lovehifi/pico/main/desktop.tar.gz
 wget https://raw.githubusercontent.com/lovehifi/pico/main/addtohomescreen.tar.gz
 wget https://raw.githubusercontent.com/lovehifi/pico/main/addtohomescreencss.tar.gz
-wget https://raw.githubusercontent.com/lovehifi/picoreaddon/main/js3.tar.gz
-wget https://raw.githubusercontent.com/lovehifi/picoreaddon/main/js4.tar.gz
+#wget https://raw.githubusercontent.com/lovehifi/picoreaddon/main/js3.tar.gz
+#wget https://raw.githubusercontent.com/lovehifi/picoreaddon/main/js4.tar.gz
 
 AFOL="/tmp/var/lib/squeezeboxserver/cache/InstalledPlugins/Plugins/MaterialSkin/HTML/material"
 BFOL="/opt/logitechmediaserver-git/cache/InstalledPlugins/Plugins/MaterialSkin/HTML/"
@@ -43,8 +43,8 @@ tar -xzvf /tmp/desktop.tar.gz --overwrite -C /tmp/
 tar -xzvf /tmp/darker.tar.gz --overwrite -C /tmp/
 tar -xzvf /tmp/addtohomescreen.tar.gz --overwrite -C /
 tar -xzvf /tmp/addtohomescreencss.tar.gz --overwrite -C /
-tar -xzvf /tmp/js3.tar.gz --overwrite -C /
-tar -xzvf /tmp/js4.tar.gz --overwrite -C /
+#tar -xzvf /tmp/js3.tar.gz --overwrite -C /
+#tar -xzvf /tmp/js4.tar.gz --overwrite -C /
 cp -rf $AFOL $BFOL
 
 # 15565 this.setLayout(false); to this.setLayout();
