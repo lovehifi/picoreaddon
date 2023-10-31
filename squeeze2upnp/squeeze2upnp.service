@@ -1,0 +1,14 @@
+[Unit]
+Description=Squeeze2upnp - LMS to UPnP Bridge
+
+
+[Service]
+#EnvironmentFile=-/opt/squeeze2upnp/environment
+ExecStart=/opt/squeeze2upnp/squeeze2upnp-linux-aarch64-static -M "rAudio" -x /opt/squeeze2upnp/config.xml
+Restart=always
+TimeoutStartSec=30
+RestartSec=2
+
+
+[Install]
+WantedBy=multi-user.target
