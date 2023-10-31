@@ -1,0 +1,23 @@
+#!/bin/sh
+mkdir -p /opt/squeeze2upnp
+cd /tmp
+wget https://raw.githubusercontent.com/lovehifi/picoreaddon/main/squeeze2upnp/config.xml
+wget https://raw.githubusercontent.com/lovehifi/picoreaddon/main/squeeze2upnp/squeeze2upnp.service
+wget https://raw.githubusercontent.com/lovehifi/picoreaddon/main/squeeze2upnp/squeeze2upnp-linux-aarch64-static
+
+cp -f /tmp/config.xml /opt/squeeze2upnp/
+cp -f /tmp/squeeze2upnp.service /etc/systemd/system/
+cp -f /tmp/squeeze2upnp-linux-aarch64-static /opt/squeeze2upnp/
+
+chmod -Rv 755 /opt/squeeze2upnp
+chown http:http /opt/squeeze2upnp/config.xml
+chmod -R 755 /etc/systemd/system/squeeze2upnp.service
+
+
+systemctl daemon-reload
+systemctl enable squeeze2upnp.service
+systemctl restart squeeze2upnp.service
+
+echo "Finished, edit config file /opt/squeeze2upnp/config.xml"
+
+#wget -O - https://raw.githubusercontent.com/lovehifi/picoreaddon/main/squeeze2upnp/install | sh
